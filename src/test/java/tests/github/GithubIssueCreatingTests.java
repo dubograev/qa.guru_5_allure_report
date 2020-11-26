@@ -10,14 +10,14 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class GithbubIssueCreatingTests {
+public class GithubIssueCreatingTests {
 
     double random = Math.random();
     String issueTitle = "Test issue #" + random;
     String login = Files.readAllLines(Paths.get("src/test/resources/login")).get(0);
     String pass = Files.readAllLines(Paths.get("src/test/resources/pass")).get(0);
 
-    public GithbubIssueCreatingTests() throws IOException {
+    public GithubIssueCreatingTests() throws IOException {
     }
 
     @Test

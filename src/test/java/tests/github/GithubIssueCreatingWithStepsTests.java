@@ -16,7 +16,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class GithbubIssueCreatingWithStepsTests {
+public class GithubIssueCreatingWithStepsTests {
 
     static double random = Math.random();
     static String issueTitle = "Test issue #" + random;
@@ -71,7 +71,7 @@ public class GithbubIssueCreatingWithStepsTests {
         steps.enterTitleOfIssueAndSubmit();
 
         steps.checkTitle();
-        steps.checkLablels(label0, label2, label3, label5);
+        steps.checkLabels(label0, label2, label3, label5);
         steps.checkAttendees();
 
         Selenide.closeWindow();
@@ -174,7 +174,7 @@ public class GithbubIssueCreatingWithStepsTests {
         }
 
         @Step("Check that the list of labels is correct")
-        private void checkLablels(String label0, String label2, String label3, String label5) {
+        private void checkLabels(String label0, String label2, String label3, String label5) {
             $("#discussion_bucket").$(".js-issue-timeline-container").shouldHave(text(label0));
             $("#discussion_bucket").$(".js-issue-timeline-container").shouldHave(text(label2));
             $("#discussion_bucket").$(".js-issue-timeline-container").shouldHave(text(label3));
@@ -187,5 +187,3 @@ public class GithbubIssueCreatingWithStepsTests {
         }
     }
 }
-
-
